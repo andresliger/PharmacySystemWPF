@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PharmacySystemWPF
 {
-    class PharmacyItem
+    public class PharmacyItem
     {
         private String nameMedicine;
         private Int32 itemNumber;

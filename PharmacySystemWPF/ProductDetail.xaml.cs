@@ -19,9 +19,29 @@ namespace PharmacySystemWPF
     /// </summary>
     public partial class ProductDetail : Window
     {
+        PharmacyItem pharmacyItem;
         public ProductDetail()
         {
             InitializeComponent();
+        }
+
+        public ProductDetail(PharmacyItem pharmacyItem)
+        {
+            InitializeComponent();
+            this.pharmacyItem = pharmacyItem;
+            txbInformation.Text = pharmacyItem.getFullDescriptionPayment();
+            this.Title = pharmacyItem.ProviderName;
+        }
+
+        private void btnAccept_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Pedido confirmado...!");
+            this.Close();
+        }
+
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
