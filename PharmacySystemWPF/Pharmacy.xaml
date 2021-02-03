@@ -1,0 +1,42 @@
+﻿<Window x:Class="PharmacySystemWPF.Pharmacy"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PharmacySystemWPF"
+        mc:Ignorable="d"
+        Title="Pharmacy" Height="548.692" Width="833.501">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="66*"/>
+            <ColumnDefinition Width="347*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="lblTitle" Content="Farmacia NET Framework" HorizontalAlignment="Left" Margin="177.207,36,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label x:Name="lblName" Content="Nombre del pedido:" HorizontalAlignment="Left" Margin="72,123,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblType" Content="Tipo de medicamento:" HorizontalAlignment="Left" Margin="289.207,123,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="23" Margin="86.207,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1" PreviewTextInput="txtName_PreviewTextInput" LostFocus="txtName_LostFocus" KeyUp="txtName_KeyUp" MaxLength="32"/>
+        <ComboBox x:Name="cmbType" HorizontalAlignment="Left" Margin="454.207,126,0,0" VerticalAlignment="Top" Width="150" Cursor="None" Grid.Column="1" SelectedIndex="0">
+            <ComboBoxItem>Analgésico</ComboBoxItem>
+            <ComboBoxItem>Analéptico</ComboBoxItem>
+            <ComboBoxItem>Anestésico</ComboBoxItem>
+            <ComboBoxItem>Antiácido</ComboBoxItem>
+            <ComboBoxItem>Antidepresivo</ComboBoxItem>
+            <ComboBoxItem>Antibiótico</ComboBoxItem>
+        </ComboBox>
+        <Label x:Name="lblTotal" Content="Cantidad del producto:" HorizontalAlignment="Left" Margin="72,214,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtTotal" HorizontalAlignment="Left" Height="23" Margin="86.207,214,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1" PreviewTextInput="txtTotal_PreviewTextInput" LostFocus="txtTotal_LostFocus" KeyUp="txtTotal_KeyUp" MaxLength="4"/>
+        <Label x:Name="lblBranch" Content="Entrega en sucursal:" HorizontalAlignment="Left" Margin="289.207,210,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <CheckBox x:Name="cbMain" Content="Principal" HorizontalAlignment="Left" Margin="454.207,214,0,0" VerticalAlignment="Top" Grid.Column="1" Checked="cbMain_Checked"/>
+        <CheckBox x:Name="cbSecondary" Content="Secundaria" HorizontalAlignment="Left" Margin="454.207,245,0,0" VerticalAlignment="Top" Grid.Column="1" Checked="cbSecondary_Checked"/>
+        <Label x:Name="lblProvider" Content="Seleccione el distribuidor:" HorizontalAlignment="Left" Margin="72,324,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <RadioButton x:Name="rbCofarma" Content="Cofarma" HorizontalAlignment="Left" Margin="136.207,330,0,0" VerticalAlignment="Top" GroupName="rbgProvider" Grid.Column="1" IsChecked="True"/>
+        <RadioButton x:Name="rbEmpsephar" Content="Empsephar" HorizontalAlignment="Left" Margin="136.207,350,0,0" VerticalAlignment="Top" GroupName="rbgProvider" Grid.Column="1"/>
+        <RadioButton x:Name="rbCamefar" Content="Camefar" HorizontalAlignment="Left" Margin="136.207,370,0,0" VerticalAlignment="Top" GroupName="rbgProvider" Grid.Column="1"/>
+        <Button x:Name="btnConfirm" Content="Confirmar" HorizontalAlignment="Left" Margin="499.207,415,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1" Click="btnConfirm_Click"/>
+        <Image x:Name="iconCheckName" Grid.Column="1" HorizontalAlignment="Left" Height="13" Margin="222,135,0,0" VerticalAlignment="Top" Width="13"/>
+        <Image x:Name="iconCheckTotal" Grid.Column="1" HorizontalAlignment="Left" Height="13" Margin="222,220,0,0" VerticalAlignment="Top" Width="13"/>
+        <Image x:Name="iconCheckBranch" Grid.Column="1" HorizontalAlignment="Left" Height="13" Margin="423,220,0,0" VerticalAlignment="Top" Width="13"/>
+
+    </Grid>
+</Window>
